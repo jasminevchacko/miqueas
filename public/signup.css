@@ -1,0 +1,45 @@
+.SignUpContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.SignUpForm {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.SignUpForm > .InputContainer {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 32px;
+}
+
+.InputContainer > label {
+    margin: 0;
+    font-weight: bold;
+}
+
+.InputContainer > input {
+    width: 100%;
+    padding: 6px;
+    margin: 2px 0 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.SignUpForm > button {
+    width: 100%;
+    max-width: 600px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}

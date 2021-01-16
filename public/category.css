@@ -1,0 +1,47 @@
+.location{
+    text-align: center;
+}
+.back{
+    margin-bottom: -5vh;
+}
+.o1, .selected{
+    border-radius: 3px;
+    background-color:white;
+    border-style:solid;
+    border-width: 1px;
+    width: 100px;
+    border-color: #51ADA9;
+    color: #51ADA9;
+    text-size-adjust:auto;
+}
+.selected{
+    background-color:#51ADA9;
+    color:white;
+}
+input[type="radio"] {
+  position: fixed;
+  z-index: -10;
+  opacity: 0;
+  left: 0;
+  top: 0;
+}
+.btn-primary:not(:disabled):not(.disabled).active{
+    background-color: #51ADA9;
+}
+.spinner{
+    margin-top: 20vh;
+    color: grey;
+}
+.items {
+  text-align: center;
+  position: relative;
+  border-collapse: collapse; 
+  text-size-adjust:auto;
+  font-size: 2vh;
+}
+
+.invBack {
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 5%;
+}

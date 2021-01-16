@@ -1,0 +1,33 @@
+.footer-btn {
+    color: grey;
+    border-color: white;
+    border-top-color: grey;
+    display: inline-block;
+    text-align: center;
+    width: 18%;
+    padding: 4px;
+    margin-bottom: -8px;
+}
+.add-btn {
+    color: grey;    
+    border-color: white;
+    border-top-color: grey;
+    display: inline-block;
+    text-align: center;
+    width: 18%;
+    padding: 0px;
+    margin-bottom: -8px;
+}
+.footer-btn .caption {
+    display:block;
+    text-size-adjust:auto;
+    font-size: 2vw;
+}
+
+.Footer {
+    position: fixed;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}

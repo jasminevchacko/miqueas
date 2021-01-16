@@ -1,0 +1,28 @@
+.qrDiv {
+  padding-top : 15%;
+  padding-bottom: 15%;
+}
+.item-fields {
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-bottom: 5%;
+}
+.addNext {
+  padding-top: 5%;
+}
+.addHeader {
+  padding: 5%;
+}
+.addBack {
+  position: absolute;
+  margin-left: 10px;
+}
+.addRadio {
+  padding-top: 5%;
+}
+
+.addCheck {
+  position: absolute;
+  margin-top: 95%;
+  margin-left: 65%;
+}

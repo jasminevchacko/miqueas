@@ -1,0 +1,58 @@
+.slim-col {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+@media (max-width:534px) {
+    .shrink-text {
+        font-size: 12px;
+    }
+}
+
+.super-shrink-text {
+    font-size:9px;
+}
+
+.side-img {
+    float: left;
+}
+
+.mini-header {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 16px;
+    color: #51ADA9;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+.card {
+    border-radius: 0.75rem !important;
+}
+
+.popup {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin-top:35vh;
+}
+
+.btn-outline-secondary-miqueas {
+    border-color: #51ADA9 !important;
+    color: #51ADA9 !important;
+    font-weight: bold !important;
+}

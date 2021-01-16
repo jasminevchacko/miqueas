@@ -1,0 +1,48 @@
+{
+  "name": "miqueas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start -p $PORT",
+    "heroku-postbuild": "npm run build"
+  },
+  "keywords": [],
+  "author": "Bits of Good <hello@bitsofgood.org>",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.8",
+    "bcryptjs": "^2.4.3",
+    "bootstrap": "^4.4.1",
+    "bootstrap-icons": "^1.0.0-alpha2",
+    "dotenv": "^8.2.0",
+    "isomorphic-unfetch": "^3.0.0",
+    "js-cookie": "^2.2.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.5.4",
+    "mongoose": "^5.8.11",
+    "next": "^9.3.2",
+    "next-cookies": "^2.0.3",
+    "next-offline": "^5.0.0",
+    "next-plugin-styled-icons": "^8.0.0",
+    "prop-types": "latest",
+    "qrcode-reader": "^1.0.4",
+    "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0-beta.16",
+    "react-device-detect": "^1.11.14",
+    "react-dom": "^16.12.0",
+    "react-qr-reader": "^2.2.1",
+    "react-responsive": "^8.0.3",
+    "styled-components": "^5.0.1",
+    "styled-icons": "^9.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.18.3"
+  }
+}

@@ -1,0 +1,15 @@
+.search{
+  border: solid #51ADA9 2px;
+  border-radius: 2px;
+  margin-top: 12px;
+  width: 60vw;
+}
+.searchButtons{
+  background-color: #51ADA9;
+  border: solid #51ADA9 2px;
+  color: white;
+  margin-bottom: -5.5px;
+  margin-left: -1px;
+  border-radius: 2px;
+  font-size: 30px;
+}

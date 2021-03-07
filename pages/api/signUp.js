@@ -5,9 +5,9 @@ import { signUp } from '../../server/actions/users';
 // @access  Public
 export default async function (req, res) {
     console.log(req.body)
-  const { name, email, password } = req.body;
+  const { name, email, password, isEnglish } = req.body;
 
-  return signUp(name, email, password)
+  return signUp(name, email, password, isEnglish)
     .then((token) => res.status(201).json({
       success: true,
       payload: token,

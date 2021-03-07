@@ -3,6 +3,9 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import mongoDB from '../index';
 import User from '../../models/User';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 export async function login(email, password) {
   await mongoDB();

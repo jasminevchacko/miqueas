@@ -22,6 +22,10 @@ const UserSchema = new Schema({
     type: Boolean,
     default: false,
   },
+  isEnglish: {
+    type: Boolean,
+    required: true,
+  },
 });
 
 export default mongoose.models.User || mongoose.model('User', UserSchema);

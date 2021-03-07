@@ -30,7 +30,7 @@ export const login = async (email, password, res) => fetch(
     return json.payload;
   });
 
-export const signUp = async (name, email, password, res) => fetch(
+export const signUp = async (name, email, password, isEnglish, res) => fetch(
   apiRoute(res, config.apis.signUp), {
     method: 'post',
     mode: 'same-origin',
@@ -42,6 +42,7 @@ export const signUp = async (name, email, password, res) => fetch(
       name,
       email,
       password,
+      isEnglish
     }),
   },
 )

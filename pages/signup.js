@@ -6,6 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row'
 import Router from 'next/router';
+import { ToggleButtonGroup, ToggleButton } from 'react-bootstrap';
 
 class SignUp extends React.Component {
 
@@ -17,6 +18,7 @@ class SignUp extends React.Component {
       email: '',
       password: '',
       confirmpass: '',
+      isEnglish: true,
       validated: false,
     };
 
@@ -32,7 +34,7 @@ class SignUp extends React.Component {
   submitForm = async (event) => {
     event.preventDefault();
 
-    const { name, email, password } = this.state;
+    const { name, email, password, isEnglish } = this.state;
 
     const form = event.currentTarget;
     if (form.checkValidity() === false || !this.doPasswordsMatch()
@@ -40,7 +42,7 @@ class SignUp extends React.Component {
       event.preventDefault();
       event.stopPropagation();
     } else {
-      await signUp(name, email, password) .then(() => Router.push('/signin'))
+      await signUp(name, email, password, isEnglish) .then(() => Router.push('/signin'))
         .catch(e => { console.log(e) })
     }
 
@@ -66,8 +68,20 @@ class SignUp extends React.Component {
     return exp.test(addr);
   }
 
+  handleChange = (value) => {
+    this.setState({selectedValue: value});
+    switch(value) {
+      case 1: 
+        this.setState({isEnglish: true});
+        break;
+      case 2:
+        this.setState({isEnglish: false});
+        break;
+    }
+  };
+
   render() {
-    const { name, email, password, confirmpass, validated } = this.state;
+    const { name, email, password, confirmpass, isEnglish, validated } = this.state;
 
     return (
       <Container>
@@ -121,6 +135,21 @@ class SignUp extends React.Component {
               {(this.doPasswordsMatch() ? "Please enter a password" :
                 "Passwords do not match")}
             </Form.Control.Feedback>
+          </Form.Group>
+          <Form.Group>
+           <div className="languageSelection">
+             <ToggleButtonGroup className="language" name="Radio"
+                              value={isEnglish}
+                             onChange={this.handleChange}>
+              <ToggleButton
+                className={this.state.isEnglish ? 'selected' : 'o1'}
+                value={1}>English
+              </ToggleButton>
+            <ToggleButton
+             className={this.state.isEnglish ? 'o1' : 'selected'}
+                            value={2}>Spanish</ToggleButton>
+            </ToggleButtonGroup>
+          </div>
           </Form.Group>
           <Container>
             <Row className={'justify-content-center'}>

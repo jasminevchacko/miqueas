@@ -6,7 +6,6 @@ const createSection = (props, itemGroup, date) => {
     var section = []
     section.push(<tr key={date}><th style = {{paddingLeft: "8%"}}colSpan={7}>{date}</th></tr>)
     for (let item of itemGroup) {
-        console.log(item.stock < item.reorder_level);
         section.push(
             <tr 
             className={item.stock < item.reorder_level ? 'red':'white'}
@@ -24,8 +23,6 @@ const createSection = (props, itemGroup, date) => {
     )}
     return section;
 }
-
-{/* <tr style='<%# (bool)Eval("IsReportGenerated") ? "background-color:#fdc433;" : "background-color:#b2e071;" %>'></tr> */}
 
 const LogTable = (props) => {
     let dataTable = [];

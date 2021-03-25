@@ -6,8 +6,11 @@ const createSection = (props, itemGroup, date) => {
     var section = []
     section.push(<tr key={date}><th style = {{paddingLeft: "8%"}}colSpan={7}>{date}</th></tr>)
     for (let item of itemGroup) {
+        console.log(item.stock < item.reorder_level);
         section.push(
-            <tr onClick={() => props.callback(item)} 
+            <tr 
+            className={item.stock < item.reorder_level ? 'red':'white'}
+            onClick={() => props.callback(item)} 
             key={item.transactionItemId}>
                 {item.gender=='male' && <td className='icon'><FontAwesomeIcon className='male' icon={faMale} /></td>}
                 {item.gender=='female' && <td className='icon'><FontAwesomeIcon className='female' icon={faFemale} /></td>}
@@ -21,6 +24,8 @@ const createSection = (props, itemGroup, date) => {
     )}
     return section;
 }
+
+{/* <tr style='<%# (bool)Eval("IsReportGenerated") ? "background-color:#fdc433;" : "background-color:#b2e071;" %>'></tr> */}
 
 const LogTable = (props) => {
     let dataTable = [];

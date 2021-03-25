@@ -31,7 +31,7 @@ export async function login(email, password) {
     }));
 }
 
-export async function signUp(name, email, password) {
+export async function signUp(name, email, password, isEnglish) {
   await mongoDB();
 
   return User.countDocuments({ email })
@@ -46,6 +46,7 @@ export async function signUp(name, email, password) {
       name,
       email,
       password: hashedPassword,
+      isEnglish,
     }))
     .then((user) => jwt.sign({
       id: user._id,
